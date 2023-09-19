@@ -48,6 +48,7 @@ const App = () => {
     await worker.initialize('eng');
     const response = await worker.recognize(imageData!);
     setDetectedText(response.data.text);
+    setProgress({ percent: 0, status: '' });
   };
 
   return (
@@ -79,8 +80,9 @@ const App = () => {
             <Image src={imageData} />
             {imageData && (
               <Button
+                disabled={!!progress.status}
                 onClick={extractHandler}
-                className="extract-button justify-center bg-secondary hover:text-primary-light"
+                className="extract-button justify-center bg-secondary hover:text-primary-light disabled:bg-secondary/50"
               >
                 Extract
               </Button>

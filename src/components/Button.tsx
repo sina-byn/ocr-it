@@ -10,7 +10,7 @@ const Button = ({ onClick, className, children, ...props }: ButtonProps) => {
       type="button"
       onClick={onClick}
       className={clsx(
-        'button flex gap-x-2 hover:bg-zinc-900 rounded-md p-2',
+        'button flex gap-x-2 hover:bg-zinc-900 rounded-md disabled:cursor-not-allowed p-2',
         className
       )}
       {...props}
