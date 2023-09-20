@@ -58,7 +58,7 @@ const App = () => {
         toastOptions={{
           duration: 1500,
           className:
-            'bg-secondary text-primary text-sm font-semibold shadow-lg',
+            '!bg-secondary text-primary text-sm font-semibold shadow-lg',
         }}
       />
       <header className="app-header bg-primary-dark text-secondary py-3 px-2 md:px-4">
